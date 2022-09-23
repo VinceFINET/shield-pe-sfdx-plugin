@@ -51,7 +51,7 @@
     "commands": "./lib/commands",
     "bin": "sfdx",
     "topics": {
-      "shieldpe": {
+      "shieldpe:fields": {
         "description": "Commands to check Shield PE settings."
       }
     }

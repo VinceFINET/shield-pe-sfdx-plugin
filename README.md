@@ -29,7 +29,33 @@ USAGE
 ```
 <!-- usagestop -->
 <!-- commands -->
+* [`sfdx shieldpe:fields [-v <string>] [-u <string>] [--apiversion <string>] [--json] [--loglevel trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL]`](#sfdx-shieldpefields--v-string--u-string---apiversion-string---json---loglevel-tracedebuginfowarnerrorfataltracedebuginfowarnerrorfatal)
 
+## `sfdx shieldpe:fields [-v <string>] [-u <string>] [--apiversion <string>] [--json] [--loglevel trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL]`
+
+list the fields that are encrypted on the platform with Shield PE
+
+```
+USAGE
+  $ sfdx shieldpe:fields [-v <string>] [-u <string>] [--apiversion <string>] [--json] [--loglevel
+    trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL]
+
+FLAGS
+  -u, --targetusername=<value>                                                      username or alias for the target
+                                                                                    org; overrides default target org
+  -v, --targetdevhubusername=<value>                                                username or alias for the dev hub
+                                                                                    org; overrides default dev hub org
+  --apiversion=<value>                                                              override the api version used for
+                                                                                    api requests made by this command
+  --json                                                                            format output as json
+  --loglevel=(trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL)  [default: warn] logging level for
+                                                                                    this command invocation
+
+DESCRIPTION
+  list the fields that are encrypted on the platform with Shield PE
+```
+
+_See code: [src/commands/shieldpe/fields.ts](https://github.com/VinceFINET/shield-pe-sfdx-plugin/blob/v0.0.1/src/commands/shieldpe/fields.ts)_
 <!-- commandsstop -->
 <!-- debugging-your-plugin -->
 # Debugging your plugin
