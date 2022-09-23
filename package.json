@@ -51,8 +51,8 @@
     "commands": "./lib/commands",
     "bin": "sfdx",
     "topics": {
-      "hello": {
-        "description": "Commands to say hello."
+      "shieldpe": {
+        "description": "Commands to check Shield PE settings."
       }
     }
   },
