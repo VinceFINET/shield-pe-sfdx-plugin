@@ -1,4 +1,4 @@
 {
-  "commandDescription": "list the fields that are encrypted on the platform with Shield PE",
+  "commandDescription": "List the fields that are encrypted on the platform with Shield PE",
   "errorNoResult": "No results found."
 }

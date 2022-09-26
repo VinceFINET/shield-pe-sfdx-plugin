@@ -1,6 +1,6 @@
 {
   "name": "shield-pe-sfdx-plugin",
-  "description": "Shield Platform Ecnryption SFDX Plugin",
+  "description": "Shield Platform Encryption SFDX Plugin",
   "version": "0.0.1",
   "author": "Vincent FINET @VinceFINET",
   "bugs": "https://github.com/VinceFINET/shield-pe-sfdx-plugin/issues",
