@@ -32,23 +32,21 @@ export default class Fields extends SfdxCommand {
 
   public async run(): Promise<Array<Field>> {
 
-    this.ux.log('getting the connection...');
     const conn = this.org.getConnection();
-
-    this.ux.log('getting a global description of the data model...');
     const describeGlobalResult = await conn.describeGlobal();
 
     if (!describeGlobalResult.sobjects || describeGlobalResult.sobjects.length <= 0) {
       throw new SfError(messages.getMessage('errorNoResult'));
     }
-    this.ux.log('found '+describeGlobalResult.sobjects.length+' objects');
+    const numberObjects = describeGlobalResult.sobjects.length;
+    this.ux.log('We found '+numberObjects+' objects');
 
     const output = new Array<Field>();
 
     this.ux.startSpinner('Parsing the objects...');
-    for (var i=0; i<describeGlobalResult.sobjects.length; i++) {
+    for (var i=0; i<numberObjects; i++) {
       const currentObject = describeGlobalResult.sobjects[i];
-      this.ux.setSpinnerStatus('Object '+currentObject.name);
+      this.ux.setSpinnerStatus('Object '+i+'/'+numberObjects+' : '+currentObject.name);
       const describeResult = await conn.describe(describeGlobalResult.sobjects[i].name);
       for (var j=0; j<describeResult.fields.length; j++) {
         const currentField = describeResult.fields[j];
